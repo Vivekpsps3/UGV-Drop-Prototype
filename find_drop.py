@@ -1,7 +1,7 @@
 import math
 import time
 
-def find_drop(lat, lon, alt, velocity, heading, windSpeed, windHeading):
+def find_drop(lat, lon, alt, velocityN,VelocityE, windSpeed, windHeading):
     startTime = time.time_ns()
     #You get information of aircraft as it is now
     '''
@@ -9,9 +9,9 @@ def find_drop(lat, lon, alt, velocity, heading, windSpeed, windHeading):
     :param lon: Longitude
     :param alt: Altitude (meters): Height above ground(NOT SEA LEVEL ALT)
     :param velocity: m/s
-    :param heading:
+    :param heading: in degrees
     :param windSpeed: m/s
-    :param windHeading:
+    :param windHeading: in degrees
     :return:
     '''
 
