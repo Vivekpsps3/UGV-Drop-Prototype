@@ -23,6 +23,11 @@ def main():
     windSpeed = airspeed - groundspeed
     windHeading = 12.12
     lat, lon = find_drop(lat, lon, alt, velocityN,velocityE, heading, windSpeed, windHeading)
+
+    targetLat = 12.12
+    targetLon = 12.112
+    if abs(targetLon-lon) < 0.001 and abs(targetLat-lat) < 0.001:
+        drop_ugv()
     print(lat, lon)
 
     return 0

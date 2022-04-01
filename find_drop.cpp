@@ -36,8 +36,6 @@ void find_drop(float lat, float lon, float alt, float velocity, float heading, f
     float longKm = (M_PI / 180) * rEarth * cos(lon * M_PI / 180) * 1000;
     lon = dX / latKm + lon;
     lat = dY / longKm + lat;
-    std::cout << lat << lon<< std::endl;
-
 }
 // Airstrip latitude : 38.147250
 // Airstrip Longitude : -76.426444
@@ -50,6 +48,5 @@ int main(int argc, char *argv[]) {
     float windSpeed = 12.12;
     float windHeading = 12.12;
     find_drop(lat, lon, alt, velocity, heading, windSpeed, windHeading);
-    std::cout << "Hello Word"<< std::endl;
     return 0;
 }
