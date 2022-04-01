@@ -18,7 +18,9 @@ def main():
     alt = telemetry.gps_altitude
     velocityN = telemetry.velocity_ned.north_m_s
     velocityE = telemetry.velocity_ned.east_m_s
-    windSpeed = 12.12
+    airspeed = telemetry.fixed_wing.airspeed
+    groundspeed = telemetry.fixed_wing.groundspeed
+    windSpeed = airspeed - groundspeed
     windHeading = 12.12
     lat, lon = find_drop(lat, lon, alt, velocityN,velocityE, heading, windSpeed, windHeading)
     print(lat, lon)

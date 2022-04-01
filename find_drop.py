@@ -32,8 +32,8 @@ def find_drop(lat, lon, alt, velocityN,VelocityE, windSpeed, windHeading):
         freeFall = alt - pullHeight
         freeFTime = math.sqrt((2*freeFall)/g)
 
-        xVel = velocity * math.cos(heading)
-        yVel = velocity * math.sin(heading)
+        xVel = velocityN
+        yVel = velocityY
         dX = xVel * freeFTime
         dY = yVel * freeFTime
 
